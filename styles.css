@@ -1597,7 +1597,7 @@ body {
     }
     
     .hero-title {
-        font-size: 2.2rem;
+        font-size: 2.2rem !important;
     }
     
     .gallery-item {
@@ -1606,6 +1606,12 @@ body {
     
     .laptop-stack {
         transform: scale(0.8);
+    }
+}
+
+@media (max-width: 576px) {
+    .title-main {
+        font-size: 2.7rem !important;
     }
 }
 
@@ -2766,4 +2772,14 @@ body {
     }
 }
 
-
+.typewriter-placeholder {
+    opacity: 0;
+    pointer-events: none;
+    user-select: none;
+    display: inline-block;
+    height: 0;
+    position: absolute;
+    left: 0;
+    top: 0;
+    white-space: pre;
+}
