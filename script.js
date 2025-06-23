@@ -500,7 +500,7 @@ window.addEventListener('load', function() {
         const texts = [
             'قصّر المشوار',
             'مهنة بالإيد ولا شهادة عالشجرة',
-            'كل شي بين إيديك'
+            'كـل شي بيـن إيديـك'
         ];
         new TypeWriter(heroTitle, texts, 150, 75, 2000);
     }
@@ -845,4 +845,3 @@ if (raffleDetailsBtn) {
         showRaffleDetailsModal();
     });
 }
-
