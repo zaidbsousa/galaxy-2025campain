@@ -30,6 +30,7 @@ html, body {
     --sub-gray-dark: #e1e5e9;
     --text-main: #333;
     --text-light: #fff;
+    color-scheme: only light;
 }
 
 body {
