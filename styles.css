@@ -10,6 +10,18 @@ html, body {
     scroll-behavior: smooth;
 }
 
+:root, html, body {
+  color-scheme: light !important;
+  background: #fff !important;
+}
+@media (prefers-color-scheme: dark) {
+  :root, html, body {
+    color-scheme: light !important;
+    background: #fff !important;
+  }
+  /* Optionally, override any other dark mode styles here */
+}
+
 :root {
     --main-color: #0066ff;
     --sub-white: #fff;
