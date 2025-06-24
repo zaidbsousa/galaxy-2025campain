@@ -31,6 +31,29 @@ navToggle.addEventListener('click', function() {
     navToggle.classList.toggle('active');
 });
 
+// Close menu when a nav link is clicked
+document.querySelectorAll('.nav-menu .nav-link').forEach(link => {
+    link.addEventListener('click', () => {
+        if (navMenu.classList.contains('active')) {
+            navMenu.classList.remove('active');
+            navToggle.classList.remove('active');
+        }
+    });
+});
+
+// Close mobile menu when clicking outside
+document.addEventListener('click', function(e) {
+    if (navMenu.classList.contains('active')) {
+        const isClickInsideNav = navMenu.contains(e.target);
+        const isClickOnToggle = navToggle.contains(e.target);
+
+        if (!isClickInsideNav && !isClickOnToggle) {
+            navMenu.classList.remove('active');
+            navToggle.classList.remove('active');
+        }
+    }
+});
+
 // Gallery item animations
 const galleryItems = document.querySelectorAll('.gallery-item');
 galleryItems.forEach((item, index) => {
