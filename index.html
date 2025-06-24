@@ -105,6 +105,7 @@
         </div>
     </section>
 
+
     <!-- About Campaign Section -->
     <section id="about" class="about-campaign">
         <div class="container">
@@ -333,12 +334,42 @@
             </div>
         </div>
     </section>
+        <!-- Scratch and Win Promo Section -->
+        <!-- <section id="scratch-and-win" class="scratch-label-section" style="position:relative;z-index:2;margin:2.5rem 0 2.5rem 0;overflow:visible;">
+            <div class="scratch-label-content" style="display:flex;align-items:center;justify-content:center;gap:1rem;background:#2563eb;border:3px solid #fff;box-shadow:0 4px 24px rgba(37,100,235,0.18);border-radius:40px;padding:1.1rem 2.2rem;min-height:64px;width:fit-content;margin:0 auto;">
+                <span class="scratch-label-icon" style="display:flex;align-items:center;justify-content:center;">
+                    <svg width="54" height="36" viewBox="0 0 54 36" fill="none" xmlns="http://www.w3.org/2000/svg" style="vertical-align:middle;">
+                        <rect x="3" y="7" width="48" height="22" rx="6" fill="#ffe6a8" stroke="#fff" stroke-width="3"/>
+                        <rect x="11" y="15" width="32" height="8" rx="3" fill="#e0e7ef"/>
+                        <rect x="18" y="19" width="18" height="3" rx="1.5" fill="#2563eb"/>
+                    </svg>
+                </span>
+                <span class="scratch-label-text" style="font-weight:900;font-size:1.45rem;color:#fff;letter-spacing:1px;line-height:1.2;">
+                    جرب حظك مع "اكشط واربح" عند زيارتك!
+                </span>
+                <a href="#branches" class="scratch-label-link" style="margin-right:1.2rem;background:#fff;color:#2563eb;font-weight:800;padding:0.45rem 1.2rem;border-radius:22px;font-size:1rem;text-decoration:none;box-shadow:0 2px 8px rgba(37,100,235,0.10);transition:background 0.2s;white-space:nowrap;">تعرف على الفروع</a>
+            </div>
+        </section> -->
+    
        <!-- Branch Showcase -->
    <section id="branches" class="branch-showcase">
     <div class="container">
-        <div class="section-header">
+        <div class="section-header" style="margin-bottom: 20px;">
             <h2 class="section-title">فروعنــا</h2>
             <p class="section-subtitle">ستة فروع لخدمتك في جميع كل من:</p>
+        </div>
+        <!-- اكشط واربح label below header -->
+        <div class="scratch-label-content" style="display:flex;align-items:center;justify-content:center;gap:1rem;background:#2563eb;border:3px solid #fff;box-shadow:0 4px 24px rgba(37,100,235,0.18);border-radius:40px;padding:1.1rem 2.2rem;min-height:64px;width:fit-content;margin:0 auto 1rem auto;">
+            <span class="scratch-label-icon" style="display:flex;align-items:center;justify-content:center;">
+                <svg class="scratch-label-svg" width="54" height="36" viewBox="0 0 54 36" fill="none" xmlns="http://www.w3.org/2000/svg" style="vertical-align:middle;">
+                    <rect x="3" y="7" width="48" height="22" rx="6" fill="#ffe6a8" stroke="#fff" stroke-width="3"/>
+                    <rect x="11" y="15" width="32" height="8" rx="3" fill="#e0e7ef"/>
+                    <rect x="18" y="19" width="18" height="3" rx="1.5" fill="#2563eb"/>
+                </svg>
+            </span>
+            <span class="scratch-label-text" style="font-weight:900;font-size:1.45rem;color:#fff;letter-spacing:1px;line-height:1.2;">
+                جرب حظك مع "اكشط واربح" عند زيارتك!
+            </span>
         </div>
         <div class="branch-grid">
             <div class="branch-item" data-aos="fade-up" data-aos-delay="100">
@@ -696,6 +727,43 @@
         .blue-highlight {
             color: #2564ebbd;
             font-weight: 600;
+        }
+        /* Blue animated background for scratch-and-win section */
+        .blue-animated-bg .shape-1 {background:rgba(255,255,255,0.18);width:60px;height:60px;position:absolute;top:10%;left:8%;border-radius:50%;animation:float1 7s infinite alternate;z-index:1;}
+        .blue-animated-bg .shape-2 {background:rgba(255,255,255,0.13);width:40px;height:40px;position:absolute;top:60%;left:18%;border-radius:50%;animation:float2 8s infinite alternate;z-index:1;}
+        .blue-animated-bg .shape-3 {background:rgba(255,255,255,0.10);width:80px;height:80px;position:absolute;top:30%;left:80%;border-radius:50%;animation:float3 9s infinite alternate;z-index:1;}
+        .blue-animated-bg .shape-4 {background:rgba(255,255,255,0.15);width:30px;height:30px;position:absolute;top:75%;left:70%;border-radius:50%;animation:float4 6s infinite alternate;z-index:1;}
+        .blue-animated-bg .shape-5 {background:rgba(255,255,255,0.12);width:50px;height:50px;position:absolute;top:50%;left:50%;border-radius:50%;animation:float5 10s infinite alternate;z-index:1;}
+        @keyframes float1 {0%{transform:translateY(0);}100%{transform:translateY(-18px);}}
+        @keyframes float2 {0%{transform:translateY(0);}100%{transform:translateY(22px);}}
+        @keyframes float3 {0%{transform:translateY(0);}100%{transform:translateY(-15px);}}
+        @keyframes float4 {0%{transform:translateY(0);}100%{transform:translateY(12px);}}
+        @keyframes float5 {0%{transform:translateY(0);}100%{transform:translateY(-20px);}}
+        @media (max-width: 600px) {
+            .scratch-label-content {
+                padding: 0.6rem 0.8rem !important;
+                border-radius: 22px !important;
+                min-height: 38px !important;
+                gap: 0.5rem !important;
+            }
+            .scratch-label-text {
+                font-size: 1rem !important;
+                letter-spacing: 0.5px !important;
+            }
+            .scratch-label-svg {
+                width: 32px !important;
+                height: 22px !important;
+            }
+        }
+        @media (max-width: 400px) {
+            .scratch-label-content {
+                flex-direction: column !important;
+                padding: 0.5rem 0.3rem !important;
+                gap: 0.2rem !important;
+            }
+            .scratch-label-text {
+                font-size: 0.92rem !important;
+            }
         }
     </style>
     <script>
