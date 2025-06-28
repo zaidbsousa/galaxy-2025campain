@@ -13,7 +13,6 @@ html, body {
 :root, html, body {
   color-scheme: light !important;
   background: #fff !important;
-  filter: invert(0);
   
 }
 @media (prefers-color-scheme: dark) {
@@ -186,7 +185,6 @@ body {
     align-items: center;
     position: relative;
     background: var(--main-color);
-    overflow: hidden;
 }
 
 .hero-background {
@@ -775,7 +773,47 @@ body {
     color: #2563eb;
     transform: translateY(-3px) scale(1.04);
 }
+/* Internet Access Bar */
+/* .internet-bar {
+    background: #13b913;
+    color: #fff;
+    text-align: center;
+    padding: 0.5rem 1rem;
+    font-size: 0.95rem;
+    font-weight: 500;
+    position: relative;
+    z-index: 1001;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
 
+.internet-bar p {
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.75rem;
+}
+
+.internet-bar a {
+    color: #1742a0;
+    font-weight: 700;
+    text-decoration: underline;
+    cursor: pointer;
+    transition: color 0.2s;
+}
+
+.internet-bar a:hover {
+    color: #fff;
+}
+
+.internet-bar .fa-wifi {
+    animation: wifi-pulse 2.5s infinite ease-in-out;
+}
+
+@keyframes wifi-pulse {
+    0%, 100% { transform: scale(1); opacity: 0.7; }
+    50% { transform: scale(1.2); opacity: 1; }
+} */
 /* Responsive */
 @media (max-width: 768px) {
     .raffle-hero {
