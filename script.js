@@ -142,19 +142,38 @@ document.getElementById('contactForm').addEventListener('submit', function(e) {
     const formData = new FormData(this);
     const data = Object.fromEntries(formData);
     
-    // Simulate form submission
+    // Get submit button and show loading state
     const submitBtn = this.querySelector('.submit-btn');
     const originalText = submitBtn.textContent;
     
     submitBtn.textContent = 'جاري الإرسال...';
     submitBtn.disabled = true;
     
-    setTimeout(() => {
-        alert('تم إرسال رسالتك بنجاح! سنتواصل معك قريباً.');
-        this.reset();
+    // Send data to PHP file
+    fetch('send-email.php', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(data)
+    })
+    .then(response => response.json())
+    .then(result => {
+        if (result.success) {
+            alert(result.message);
+            document.getElementById('contactForm').reset();
+        } else {
+            alert(result.message || 'حدث خطأ في إرسال الرسالة. يرجى المحاولة مرة أخرى.');
+        }
+    })
+    .catch(error => {
+        console.error('Error:', error);
+        alert('حدث خطأ في إرسال الرسالة. يرجى المحاولة مرة أخرى أو التواصل معنا مباشرة.');
+    })
+    .finally(() => {
         submitBtn.textContent = originalText;
         submitBtn.disabled = false;
-    }, 2000);
+    });
 });
 
 // Parallax effect for hero section
